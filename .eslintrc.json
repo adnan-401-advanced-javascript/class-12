@@ -1,0 +1,23 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+  "extends": "airbnb",
+  "rules": {
+    "no-console":"off",
+    "func-names": ["error", "never"],
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "max-len": [1, 140, 4, {"ignoreComments": true, "ignoreUrls": true}]
+  },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    }
+}
+
