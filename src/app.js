@@ -1,9 +1,9 @@
 // 3rd Party Resources
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
 
 // Esoteric Resources
-const oauth = require('./github.js');
+const oauth = require("./middlewares/oauth.js");
 
 // Prepare the express app
 const app = express();
@@ -12,10 +12,10 @@ const app = express();
 app.use(cors());
 
 // Website Files
-app.use(express.static('./public'));
+app.use(express.static("./public"));
 
 // Routes
-app.get('/oauth', oauth, (req, res) => {
+app.get("/oauth", oauth, (req, res) => {
   res.status(200).send(req.token);
 });
 

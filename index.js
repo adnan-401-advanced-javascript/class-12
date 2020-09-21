@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
-const app = require("./src/app");
-
 require("dotenv").config();
+
+const app = require("./src/app");
 
 const mongoURL = process.env.MONGOOSE_URL;
 
